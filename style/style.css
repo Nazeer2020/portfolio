@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@300&display=swap');
+
+/* 
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif
+}
+
+h1,
+h2,
+a {
+    font-family: 'Merriweather', serif;
+}
+
+img {
+    max-width: 100%;
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ============================================= Header ========================================== */
+/* ============================================= Header ========================================== */
+
+.nav {
+    background-color: #e9d5a1;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 7%;
+    color: #000;
+}
+
+.fa-moon {
+    color: #fff;
+}
+
+.des_nav_list {
+    display: none;
+}
+
+.mobile_nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #e9d5a1;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.moblie_link {
+    text-transform: uppercase;
+    color: #000;
+}
+
+.mobile_item {
+    margin: 20px;
+    transition: all .2s linear;
+}
+
+.fa-bars {
+    cursor: pointer;
+}
+
+
+/* ============================================= Hero ========================================== */
+/* ============================================= Hero ========================================== */
+
+
+.hero {
+    text-align: center;
+    padding: 5% 7%;
+}
+
+.about-Me-image {
+    padding: 3%;
+    width: 60%;
+    margin: 40px auto 30px auto;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 30%)
+}
+
+
+.profile {
+    border: 1px dotted #000;
+}
+
+.about-Me-text {
+    padding: 3%;
+    text-align: left;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.about-Me-text-subdiv {
+    height: 40px;
+    background-color: rgba(0,0,0,.03);
+    margin-bottom: 5%;
+    padding: 3%;
+}
+
+.about-Me-text-subdiv span {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.span_red {
+    background: red;
+}
+
+.span_yellow {
+    background: rgb(255, 218, 10);
+}
+
+.span_green {
+    background: rgb(50, 167, 50);
+}
+
+
+/* ============================================= Project Section ========================================== */
+/* ============================================= Project Section ========================================== */
+
+
+.projects {
+    padding: 5% 0 7% 0;
+    background: #e9d5a1;
+    text-align: center;
+}
+
+.project_subDiv {
+    cursor: pointer;
+    width: 80%;
+    height: 300px;
+    margin: 20px auto;
+    padding: 3%;
+    background: #fff;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 30%);
+    transition: all .2s linear;
+}
+
+.project_subDiv:hover {
+    box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
+    transform: scale(1.029);
+}
+
+.project_image {
+    height: 250px;
+}
+
+.close,
+.project_btn {
+    display: none;
+}
+
+
+/* ============================================= Skills ========================================== */
+/* ============================================= Skills ========================================== */
+
+
+.skills {
+    padding: 7%;
+    background: #1f1f1f;
+    text-align: center;
+    color: #fff;
+}
+
+.skill_list {
+    margin: 30px 0;
+}
+
+.skill_item {
+    height: 100px;
+    width: 100px;
+    display: inline-flex;
+    background:#282a2c;
+    justify-content: center;
+    align-items: center;
+    margin:5px;
+    border-radius: 5px;
+    font-size: 250%;
+}
+
+.skill_item i {
+    display: block;
+}
+
+.skill_item span {
+    font-size: 20%;
+    
+}
+
+
+/* ============================================= experience ========================================== */
+/* ============================================= experience ========================================== */
+
+.experience {
+    background: #e9d5a1;
+    text-align: center;
+    padding: 7%;
+}
+
+.experience p {
+    text-align: left;
+    margin: 20px 0;
+}
+
+
+/* ============================================= Footer ========================================== */
+/* ============================================= Footer ========================================== */
+
+
+
+footer {
+    background: #1f1f1f;
+    text-align: center;
+    color: #fff;
+    padding: 7% 0 3% 0;
+}
+
+.socail_item {
+    display: inline-block;
+    margin: 20px 10px;
+    font-size: 120%;
+
+}
+
+.socail_link {
+    color: #fff;
+}
+
+footer p {
+    font-size: 70%;
+}
+
+
+/* ============================================= Animation ========================================== */
+/* ============================================= Animation ========================================== */
+
+
+.btn {
+    transition: all .2s linear;
+}
+
+.btn:hover {
+    box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
+    transform: scale(1.1);
+}
+
+.moblie_link:hover {
+    color: #999;
+}
+
+/* ============================================= Dom manipulation ========================================== */
+/* ============================================= Dom manipulation ========================================== */
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+    
+}
