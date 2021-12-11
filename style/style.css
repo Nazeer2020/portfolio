@@ -225,6 +225,7 @@ a {
 
 
 .project_image {
+    height: 350px;
     max-height: 350px;
     width: 100%;
 }
@@ -307,7 +308,7 @@ a {
 
 .exp_subDiv {
     background-color: #fff;
-    max-width: 60%;
+    max-width: 80%;
     margin: 20px auto;
     border: 1px solid rgba(0,0,0,.125);
     padding: 3%;
@@ -566,6 +567,7 @@ footer p {
 
 @media (min-width: 700px) {
     .project_subDiv {
+        min-width: 65%;
         width: 65%;
         height: 350px;
     }
@@ -582,6 +584,12 @@ footer p {
     .project_image {
         height: 300px;
         width: 100%;
+    }
+
+    .exp_subDiv {
+        
+        max-width: 60%;
+       
     }
 }
 
