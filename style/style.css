@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap');
 
 /* 
 font-family: 'Merriweather', serif;
@@ -12,13 +12,31 @@ font-family: 'Montserrat', sans-serif */
 
 body {
     font-size: 16px;
-    font-family: 'Montserrat', sans-serif
+    font-family: "Trebuchet MS","Lucida Sans Unicode","Lucida Grande","Lucida Sans",Arial,sans-serif;
+    
+}
+
+.content {
+    /* max-width: 1440px; */
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
 h1,
 h2,
 a {
-    font-family: 'Merriweather', serif;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+p {
+    font-size: clamp(14px, 2vw, 18px);
+    line-height: 1.5;
+    font-weight: 200;
 }
 
 img {
@@ -34,11 +52,23 @@ a {
     text-decoration: none;
 }
 
+.btn {
+    transition: all .2s linear;
+}
+
+.btn::after {
+    content: "";
+    border-bottom:2px solid #fff;
+    border-bottom-width: 30%;
+    margin: 0 auto;
+    width: 50%; 
+}
+
 /* ============================================= Header ========================================== */
 /* ============================================= Header ========================================== */
 
 .nav {
-    background-color: #e9d5a1;
+    background: #e9d5a1;
     display: flex;
     justify-content: space-between;
     padding: 5% 7%;
@@ -49,9 +79,7 @@ a {
     color: #fff;
 }
 
-.des_nav_list {
-    display: none;
-}
+
 
 .mobile_nav {
     display: none;
@@ -64,10 +92,29 @@ a {
     
 }
 
+.des_nav_link,
 .moblie_link {
     text-transform: uppercase;
     color: #000;
+    position: relative;
+    
 }
+
+.des_nav_link::after,
+.moblie_link::after {
+    display: none;
+    content: "";
+    border-bottom:2px solid #000;
+    border-bottom-width: 30%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 60%; 
+    transition: all .2s linear;
+    position: absolute;
+}
+
+
 
 .mobile_item {
     margin: 20px;
@@ -78,6 +125,19 @@ a {
     cursor: pointer;
 }
 
+.des_nav {
+    display: none;
+}
+
+.des_nav_list {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.des_nav_item + .des_nav_item {
+    margin-left: 30px;
+}
 
 /* ============================================= Hero ========================================== */
 /* ============================================= Hero ========================================== */
@@ -89,21 +149,27 @@ a {
 }
 
 .about-Me-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 3%;
     width: 60%;
     margin: 40px auto 30px auto;
-    box-shadow: 0 4px 6px rgb(0 0 0 / 30%)
+    box-shadow: 0 4px 6px rgb(0 0 0 / 30%);
+    max-width: 600px;
 }
 
 
 .profile {
     border: 1px dotted #000;
+    border-radius: 50%;
 }
 
 .about-Me-text {
     padding: 3%;
     text-align: left;
     border: 1px solid rgba(0,0,0,.125);
+    max-width: 1200px;
 }
 
 .about-Me-text-subdiv {
@@ -139,35 +205,55 @@ a {
 
 
 .projects {
-    padding: 5% 0 7% 0;
+    padding: 5%  7%;
     background: #e9d5a1;
     text-align: center;
 }
 
 .project_subDiv {
+    position: relative;
     cursor: pointer;
     width: 80%;
-    height: 300px;
-    margin: 20px auto;
+    max-height: 400px;
+    margin: 50px auto;
     padding: 3%;
     background: #fff;
     box-shadow: 0 4px 6px rgb(0 0 0 / 30%);
     transition: all .2s linear;
+    border-radius: 10px;
 }
 
-.project_subDiv:hover {
-    box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
-    transform: scale(1.029);
-}
 
 .project_image {
-    height: 250px;
+    max-height: 350px;
+    width: 100%;
 }
 
-.close,
-.project_btn {
+.project_preview {
     display: none;
+    justify-content: space-around;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    background-color: #fff;
 }
+
+
+
+.project_btn {
+    display: flex;
+    width: 130px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    background: #000;
+    color: #fff;
+    border-radius: 24px;
+    font-size: 70%;
+}
+
+
 
 
 /* ============================================= Skills ========================================== */
@@ -182,7 +268,8 @@ a {
 }
 
 .skill_list {
-    margin: 30px 0;
+    padding: 30px 0;
+    box-sizing: border-box;
 }
 
 .skill_item {
@@ -192,13 +279,15 @@ a {
     background:#282a2c;
     justify-content: center;
     align-items: center;
-    margin:5px;
+    margin: 0 5px;
     border-radius: 5px;
     font-size: 250%;
+    margin-top: 20px;
 }
 
 .skill_item i {
     display: block;
+    
 }
 
 .skill_item span {
@@ -216,9 +305,19 @@ a {
     padding: 7%;
 }
 
+.exp_subDiv {
+    background-color: #fff;
+    max-width: 60%;
+    margin: 20px auto;
+    border: 1px solid rgba(0,0,0,.125);
+    padding: 3%;
+    color: #000;
+}
+
 .experience p {
     text-align: left;
     margin: 20px 0;
+    
 }
 
 
@@ -250,21 +349,142 @@ footer p {
 }
 
 
-/* ============================================= Animation ========================================== */
-/* ============================================= Animation ========================================== */
 
+/* ============================================= Switch ========================================== */
+/* ============================================= Switch ========================================== */
 
-.btn {
-    transition: all .2s linear;
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 53px;
+    height: 23px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #fff;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #000;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: #000;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/* ============================================= Dark Mode ========================================== */
+/* ============================================= Dark Mode ========================================== */
+
+.darkMode {
+    color: #7f7f7f;
 }
 
-.btn:hover {
+.darkMode01 {
+    background-color: #7f7f7f;
+}
+
+.darkMode02 {
+    background-color: #6d6d6d;
+    color:#fff
+}
+
+
+.darkMode03 {
+    background-color: #5b5b5b;
+    color: #fff;
+}
+
+
+.darkMode04 {
+    background-color: #6d6d6d;
+}
+
+
+.darkMode05 {
+    background: #5b5b5b;
+    color: #fff;
+}
+
+.darkMode06 {
+    background-color: #494949;;
+    color:#fff;
+}
+
+.darkMode07 {
+    color: #fff;
+}
+
+.moblie_link::after,
+.des_nav_link::after {
+    border-bottom:2px solid var(--check-primary);
+}
+
+/* ============================================= Animation ========================================== */
+/* ============================================= Animation ========================================== */
+
+
+.project_btn:hover {
+    text-transform: uppercase;
+}
+
+.btn:hover::after {
+    /* box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
+    transform: scale(1.1); */
+    display: block;
+}
+
+.des_nav_link:hover::after,
+.moblie_link:hover::after {
+    display: block;
+}
+
+.project_subDiv:hover {
     box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
-    transform: scale(1.1);
-}
-
-.moblie_link:hover {
-    color: #999;
+    transform: scale(1.029);
 }
 
 /* ============================================= Dom manipulation ========================================== */
@@ -274,7 +494,124 @@ footer p {
     display: block;
 }
 
-.hide {
-    display: none;
-    
+.display {
+    display: flex;
 }
+
+.hide {
+    display: none;  
+}
+
+
+/* ============================================= Media Query ========================================== */
+/* ============================================= Media Query ========================================== */
+
+/* genral */
+
+@media (min-width: 700px){
+    .row {
+        display: flex;
+    }
+
+    .col {
+        width: 100%;
+    }
+}
+
+/* nav */
+
+@media (min-width: 700px){
+
+  .nav {
+      padding: 3.5% 7%;
+  }
+  .fa-bars {
+      display: none;
+  }
+
+  .des_nav {
+      display: block;
+  }
+  .des_nav_list {
+    display: flex;
+  }
+
+}
+
+/* hero */
+
+
+@media (min-width: 700px){
+
+    .hero {
+        align-items: center;
+    }
+    .about-Me-image {
+        margin-right: 10%;
+        min-width: 200px;
+    }
+
+    .about-Me-text {
+        max-height: 400px;
+        margin: auto 0;
+    }
+
+    .about-Me-heading {
+        margin-bottom: 50px;
+    }
+}
+
+
+/* project */
+
+@media (min-width: 700px) {
+    .project_subDiv {
+        width: 65%;
+        height: 350px;
+    }
+    .project_preview {
+        height: 150px;
+        left: 0;
+        right: 0;
+        position: absolute;
+        box-shadow: 0 4px 6px rgb(0 0 0 / 30%);
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .project_image {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+
+/* skills */
+
+
+@media (min-width: 700px){
+   .skill_item {
+    height: 150px;
+    width: 150px;
+    font-size: 270%;
+    margin-left: 20px;
+    margin-right: 20px;
+   }
+}
+
+/* footer */
+
+@media (min-width: 700px){
+    .socail_item {
+        
+        margin: 20px 15px;
+        font-size: 150%;
+    
+    }
+
+    footer p {
+        font-size: 90%;
+    }
+    
+    
+ }
