@@ -148,6 +148,7 @@ a {
   margin: 40px auto 30px auto;
   box-shadow: 0 4px 6px rgb(0 0 0 / 30%);
   max-width: 600px;
+  border-radius: 10px;
 }
 
 .profile {
@@ -160,6 +161,7 @@ a {
   text-align: left;
   border: 1px solid rgba(0, 0, 0, 0.125);
   max-width: 1200px;
+  border-radius: 10px;
 }
 
 .about-Me-text-subdiv {
@@ -175,6 +177,7 @@ a {
   height: 7px;
   border-radius: 50%;
   margin-left: 10px;
+  
 }
 
 .span_red {
@@ -220,6 +223,7 @@ a {
   height: 350px;
   max-height: 350px;
   width: 100%;
+  border-radius: 10px;
 }
 
 .project_preview {
@@ -273,7 +277,7 @@ a {
   justify-content: center;
   align-items: center;
   margin: 0 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 250%;
   margin-top: 20px;
 }
@@ -302,6 +306,7 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.125);
   padding: 3%;
   color: #000;
+  border-radius: 10px;
 }
 
 .experience p {
