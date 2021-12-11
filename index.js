@@ -20,11 +20,11 @@ let themeMode = localStorage.getItem("themeMode");
 
 // mobile Navigation
 
-barBtn.addEventListener("click", ()=>{
+barBtn.addEventListener("click", () => {
 
     mobileNav.classList.toggle("show");
     barBtn.classList.toggle("fa-times");
-    
+
 })
 
 
@@ -34,9 +34,9 @@ barBtn.addEventListener("click", ()=>{
 // project preview
 
 project.forEach((element, index) => {
-    element.addEventListener("click", ()=>{
+    element.addEventListener("click", () => {
         projectPreview[index].classList.toggle("display")
-        
+
     })
 })
 
@@ -45,28 +45,28 @@ project.forEach((element, index) => {
 
 
 
-if(themeMode === "darkTheme"){
+if (themeMode === "darkTheme") {
     darkTheme()
-    
+
 } else {
     lightTheme()
-    
+
 }
 
 
-inputElement.addEventListener("change", ()=>{
-    
-    if(inputElement.checked === true){
+inputElement.addEventListener("change", () => {
+
+    if (inputElement.checked === true) {
         darkTheme()
     } else {
         lightTheme()
     }
-    
+
 
 })
 
 
-function darkTheme(){
+function darkTheme() {
     inputElement.checked = true;
     hero.classList.add("darkMode01");
     aboutMeImage.classList.add("darkMode02");
@@ -79,7 +79,7 @@ function darkTheme(){
         element.classList.add("darkMode04")
     });
     projectPreview.forEach(element => {
-       
+
         element.classList.add("darkMode04")
     })
     experience.classList.add("darkMode05");
@@ -97,7 +97,7 @@ function darkTheme(){
 }
 
 
-function lightTheme () {
+function lightTheme() {
 
     hero.classList.remove("darkMode01");
     aboutMeImage.classList.remove("darkMode02");
@@ -110,15 +110,15 @@ function lightTheme () {
         element.classList.remove("darkMode04")
     });
     projectPreview.forEach(element => {
-       
+
         element.classList.remove("darkMode04")
     })
     heading.classList.remove("darkMode07")
-    desNavLink.forEach(element =>{
+    desNavLink.forEach(element => {
         element.classList.remove("darkMode07")
         element.style.setProperty("--check-primary", "#000")
     })
-    mobNavLink.forEach(element =>{
+    mobNavLink.forEach(element => {
         element.classList.remove("darkMode07")
         element.style.setProperty("--check-primary", "#000")
     })
