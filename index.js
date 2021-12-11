@@ -36,6 +36,7 @@ barBtn.addEventListener("click", () => {
 project.forEach((element, index) => {
     element.addEventListener("click", () => {
         projectPreview[index].classList.toggle("display")
+        project[index].classList.toggle("borderShape")
 
     })
 })
