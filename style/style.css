@@ -339,8 +339,8 @@ footer p {
 .switch {
   position: relative;
   display: inline-block;
-  width: 53px;
-  height: 23px;
+  width: 40px;
+  height: 17px;
 }
 
 /* Hide default HTML checkbox */
@@ -366,10 +366,10 @@ footer p {
 .slider:before {
   position: absolute;
   content: "";
-  height: 15px;
-  width: 15px;
-  left: 4px;
-  bottom: 4px;
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -384,9 +384,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(23px);
+  -ms-transform: translateX(23px);
+  transform: translateX(23px);
   background-color: #000;
 }
 
