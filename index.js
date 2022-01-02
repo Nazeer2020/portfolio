@@ -135,5 +135,5 @@ function lightTheme() {
 
 const date = new Date();
 
-copyright.innerText = `© ${date.getFullYear()} Nazeer Haidar`
+copyright.innerText = `© ${date.getFullYear()} Nazeer Haidari`
 
