@@ -17,6 +17,9 @@ const mobNavLink = document.querySelectorAll(".moblie_link");
 const heading = document.querySelector(".about-Me-heading")
 const exp_subDiv = document.querySelector(".exp_subDiv")
 let themeMode = localStorage.getItem("themeMode");
+const copyright = document.querySelector(".copyright")
+
+
 
 // mobile Navigation
 
@@ -129,4 +132,8 @@ function lightTheme() {
     themeMode = localStorage.setItem("themeMode", "lightTheme")
 
 }
+
+const date = new Date();
+
+copyright.innerText = `© ${date.getFullYear()} Nazeer Haidar`
 
